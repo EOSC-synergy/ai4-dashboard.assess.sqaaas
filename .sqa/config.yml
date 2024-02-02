@@ -1,0 +1,42 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/2.0.0
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/ai4os/ai4-dashboard:
+      branch: main
+      repo: https://github.com/ai4os/ai4-dashboard
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/ai4os/ai4-dashboard git:
+        commands:
+        - /usr/bin/env sh .sqa/script.pretty-plum-bison.sh
+        container: qc.acc_hilly-seashell-orangutan
+  QC.Doc:
+    repos:
+      github.com/ai4os/ai4-dashboard find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.crappy-black-robin.sh
+        container: qc.doc_sickly-auburn-booby
+      github.com/ai4os/ai4-dashboard git:
+        commands:
+        - /usr/bin/env sh .sqa/script.pretty-amber-ant.sh
+        container: qc.doc_zippy-fuchsia-coati
+  QC.Lic:
+    repos:
+      github.com/ai4os/ai4-dashboard licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.jumpy-tangerine-affenpinscher.sh
+        container: qc.lic_shabby-flax-squid
+  QC.Ver:
+    repos:
+      github.com/ai4os/ai4-dashboard get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.boozy-cream-dachsbracke.sh
+        container: qc.ver_squeaky-aqua-tiger
+timeout: 5400
