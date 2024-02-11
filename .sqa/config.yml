@@ -15,28 +15,28 @@ sqa_criteria:
     repos:
       github.com/ai4os/ai4-dashboard git:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-plum-bison.sh
-        container: qc.acc_hilly-seashell-orangutan
+        - /usr/bin/env sh .sqa/script.squirrely-lilac-yak.sh
+        container: qc.acc_hazy-cornflower-jellyfish
   QC.Doc:
     repos:
       github.com/ai4os/ai4-dashboard find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-black-robin.sh
-        container: qc.doc_sickly-auburn-booby
+        - /usr/bin/env sh .sqa/script.blurry-scarlet-gharial.sh
+        container: qc.doc_shaggy-violet-bullfrog
       github.com/ai4os/ai4-dashboard git:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-amber-ant.sh
-        container: qc.doc_zippy-fuchsia-coati
+        - /usr/bin/env sh .sqa/script.scaly-cerise-paradise.sh
+        container: qc.doc_crabby-silver-maltese
   QC.Lic:
     repos:
       github.com/ai4os/ai4-dashboard licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.jumpy-tangerine-affenpinscher.sh
-        container: qc.lic_shabby-flax-squid
+        - /usr/bin/env sh .sqa/script.tacky-cornflower-bison.sh
+        container: qc.lic_flimsy-cornflower-woodpecker
   QC.Ver:
     repos:
       github.com/ai4os/ai4-dashboard get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.boozy-cream-dachsbracke.sh
-        container: qc.ver_squeaky-aqua-tiger
+        - /usr/bin/env sh .sqa/script.sickly-sapphire-tapir.sh
+        container: qc.ver_scanty-sangria-barb
 timeout: 5400
